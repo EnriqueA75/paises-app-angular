@@ -2,16 +2,10 @@
 <hr>
 <div class="row">
     <div class="col">
-        <!-- <form action="" autocomplete="off" (ngSubmit)="buscar()">
-            <input 
-                type="text"
-                name="termino"
-                placeholder="Busca por país"
-                class="form-control"
-                [(ngModel)]="termino"
-            />
-        </form> -->
-        <app-pais-input (onEnter)="buscar( $event )"></app-pais-input>
+        <app-pais-input 
+            (onEnter)="buscar( $event )" 
+            (onDebounce)="sugerencias( $event )"
+        ></app-pais-input>
     </div>
 </div>
 <hr>
