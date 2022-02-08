@@ -11,7 +11,7 @@
                 [(ngModel)]="termino"
             />
         </form> -->
-        <app-pais-input></app-pais-input>
+        <app-pais-input (onEnter)="buscar( $event )"></app-pais-input>
     </div>
 </div>
 <hr>
