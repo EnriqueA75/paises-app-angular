@@ -8,7 +8,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let pais of paises">
+        <tr *ngFor="let pais of paises" class="animate__animated animate__tada">
             <td>{{pais.ccn3}}</td>
             <td><img [src]="pais.flags.png" class="small-flag" style=" width: 50px"></td>
             <td>{{pais.capital}} {{pais.name.common}}</td>

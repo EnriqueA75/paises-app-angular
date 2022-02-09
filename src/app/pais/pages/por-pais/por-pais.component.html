@@ -9,6 +9,20 @@
         ></app-pais-input>
     </div>
 </div>
+
+    <ul class="list-group" *ngIf="mostrarSugerencias">
+        <li class="list-group-item">
+            <a class="nav-link" (click)="buscarSugerido(termino)">
+                Buscar "{{termino}}"
+            </a>
+        </li>
+        <li *ngFor="let pais of paisesSugeridos" class="list-group-item">
+            <a [routerLink]="['pais', pais.altSpellings[0]]" class="nav-link">
+                {{pais.name.common}}
+            </a>
+        </li>
+    </ul>
+
 <hr>
 <div class="alert alert-danger" *ngIf="hayError">
     No se encontró nada con el termino {{termino}}
